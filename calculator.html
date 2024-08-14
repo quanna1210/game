@@ -1,0 +1,90 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Calculator</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+    <style>
+        #result {
+          font-family: Arial, Helvetica, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        #result td, #result th {
+          border: 1px solid #ddd;
+          padding: 8px;
+        }
+        
+        #result tr:nth-child(even){background-color: #f2f2f2;}
+        
+        #result tr:hover {background-color: #ddd;}
+        
+        #result th {
+          padding-top: 12px;
+          padding-bottom: 12px;
+          text-align: left;
+          background-color: #04AA6D;
+          color: white;
+        }
+        </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;margin-top:20px;font-family: sans-serif;">Tính tiền hàng</h1>
+    <div style="padding:15px;text-align: center;">
+        <textarea style="width: 100%;padding:10px;border-color:#ddd;border-radius:5px;" rows="10" id="content" placeholder="Nhập nội dung hàng"></textarea>
+        <button style="background-color: #04AA6D; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+            margin:20px auto;" id="submit-btn">Tính tổng</button>
+        <div id="result" style="margin-top:20px">
+
+        </div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).on('click', '#submit-btn', function (e) {
+            var content = $('#content').val()
+            if(content == ''){
+                return;
+            }
+            const pattern = /(|-)[0-9]+k/gm;
+            let match;
+            let result = []
+            while ((match = pattern.exec(content)) !== null) {
+                result.push(match[0])
+            }
+            let html = '<table id="result">';
+            html+='<tr><th>STT</th><th>Khoản tiền</th></tr>'
+            let tongtien = 0;
+            for(var i=0;i<result.length;i++){
+                let cash = parseInt(result[i].replace('k',''))
+                tongtien = tongtien + cash
+                html+= '<tr>'
+                html+='<td>'+(i+1)+'</td>'
+                html+='<td>'+result[i]+'</td>'
+                html+= '</tr>'
+            }
+            html+='<tr><th>Tổng tiền</th><th>'+tongtien+'k</th></tr>'
+            html+='</table>'
+            $('#result').html(html)
+            $('#result').focus()
+        })
+    </script>
+</body>
+
+</html>
