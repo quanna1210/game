@@ -24,11 +24,13 @@ async function handleRequest(request) {
     "Referer" : refer
   });
   // Returning fetch() with resizing options will pass through response with the resized image.
-  return fetch(link,{
+  var result = fetch(link,{
     method  : 'GET', 
     headers : headers
 })
+  document.getElementById("test").innerHTML = result
 }
   </script>
+  <div id="result"></div>
 </body>
 </html>
