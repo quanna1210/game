@@ -1,8 +1,18 @@
 <html>
-  <head>
-    
-  </head>
-  <body>
-    <div id="result"></div>
-  </body>
+<head>
+</head>
+<body>  
+  <script type="text/JavaScript">
+  function httpGet(theUrl)
+  {
+    var xmlHttp = null;
+
+    xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false );
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+  }
+  document.write(httpGet("https://stackoverflow.com/"));
+  </script>
+</body>
 </html>
