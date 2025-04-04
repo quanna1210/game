@@ -1,0 +1,226 @@
+    {
+        "international": [
+            {
+                "id": 1,
+                "title": "New Year's Day",
+                "type": "official",
+                "date": "01-01",
+                "is_rest": 1,
+                "data_type": "date",
+                "data": {}
+            },
+            {
+                "id": 2,
+                "title": "Martin Luther King Jr. Day",
+                "type": "official",
+                "date": "third Monday in January",
+                "is_rest": 1,
+                "data_type": "query",
+                "data": {
+                    "fn": "getDayOfMonthWeek",
+                    "month": 0,
+                    "week": 3,
+                    "day": 1
+                }
+            },
+            {
+                "id": 3,
+                "title": "President's Day",
+                "type": "official",
+                "date": "third Monday in February",
+                "is_rest": 1,
+                "data_type": "query",
+                "data": {
+                    "fn": "getDayOfMonthWeek",
+                    "month": 1,
+                    "week": 3,
+                    "day": 1
+                }
+            },
+            {
+                "id": 4,
+                "title": "Memorial Day",
+                "type": "official",
+                "date": "last Monday in May",
+                "is_rest": 1,
+                "data_type": "query",
+                "data": {
+                    "fn": "getLastDayOfMonth",
+                    "month": 4,
+                    "week": 0,
+                    "day": 1
+                }
+            },
+            {
+                "id": 5,
+                "title": "Independence Day",
+                "type": "official",
+                "date": "07-04",
+                "is_rest": 1,
+                "data_type": "date",
+                "data": {}
+            },
+            {
+                "id": 6,
+                "title": "Labor Day",
+                "type": "official",
+                "date": "first Monday in September",
+                "is_rest": 1,
+                "data_type": "query",
+                "data": {
+                    "fn": "getDayOfMonthWeek",
+                    "month": 8,
+                    "week": 1,
+                    "day": 1
+                }
+            },
+            {
+                "id": 7,
+                "title": "Columbus Day or Indigenous Peoples' Day",
+                "type": "official",
+                "date": "second Monday in October",
+                "is_rest": 1,
+                "data_type": "query",
+                "data": {
+                    "fn": "getDayOfMonthWeek",
+                    "month": 9,
+                    "week": 2,
+                    "day": 1
+                }
+            },
+            {
+                "id": 8,
+                "title": "Veterans Day",
+                "type": "official",
+                "date": "11-11",
+                "is_rest": 1,
+                "data_type": "date",
+                "data": {}
+            },
+            {
+                "id": 9,
+                "title": "Thanksgiving Day",
+                "type": "official",
+                "date": "fourth Thursday in November",
+                "is_rest": 1,
+                "data_type": "query",
+                "data": {
+                    "fn": "getDayOfMonthWeek",
+                    "month": 10,
+                    "week": 4,
+                    "day": 4
+                }
+            },
+            {
+                "id": 10,
+                "title": "Christmas Day",
+                "type": "official",
+                "date": "12-25",
+                "is_rest": 1,
+                "data_type": "date",
+                "data": {}
+            },
+            {
+                "id": 11,
+                "title": "Valentine's Day",
+                "type": "unofficial",
+                "date": "02-14",
+                "is_rest": 0,
+                "data_type": "date",
+                "data": {}
+            },
+            {
+                "id": 12,
+                "title": "St. Patrick's Day",
+                "type": "unofficial",
+                "date": "03-17",
+                "is_rest": 0,
+                "data_type": "date",
+                "data": {}
+            },
+            {
+                "id": 13,
+                "title": "April Fools' Day",
+                "type": "unofficial",
+                "date": "04-01",
+                "is_rest": 0,
+                "data_type": "date",
+                "data": {}
+            },
+            {
+                "id": 14,
+                "title": "Mother's Day",
+                "type": "unofficial",
+                "date": "second Sunday in May",
+                "is_rest": 0,
+                "data_type": "query",
+                "data": {
+                    "fn": "getDayOfMonthWeek",
+                    "month": 4,
+                    "week": 2,
+                    "day": 0
+                }
+            },
+            {
+                "id": 15,
+                "title": "Father's Day",
+                "type": "unofficial",
+                "date": "third Sunday in June",
+                "is_rest": 0,
+                "data_type": "query",
+                "data": {
+                    "fn": "getDayOfMonthWeek",
+                    "month": 5,
+                    "week": 23,
+                    "day": 0
+                }
+            },
+            {
+                "id": 16,
+                "title": "Halloween",
+                "type": "unofficial",
+                "date": "10-31",
+                "is_rest": 0,
+                "data_type": "date",
+                "data": {}
+            },
+            {
+                "id": 17,
+                "title": "Black Friday",
+                "type": "unofficial",
+                "date": "day after Thanksgiving",
+                "is_rest": 0,
+                "data_type": "query",
+                "data": {
+                    "fn": "getDayOfMonthWeek",
+                    "month": 10,
+                    "week": 4,
+                    "day": 5
+                }
+            },
+            {
+                "id": 18,
+                "title": "Friendship Day",
+                "type": "unofficial",
+                "date": "first Sunday in August",
+                "is_rest": 0,
+                "data_type": "query",
+                "data": {
+                    "fn": "getDayOfMonthWeek",
+                    "month": 7,
+                    "week": 1,
+                    "day": 0
+                }
+            },
+            {
+                "id": 19,
+                "title": "Juneteenth Day",
+                "type": "official",
+                "date": "06-19",
+                "is_rest": 1,
+                "data_type": "date",
+                "data": {}
+            }
+        ],
+        "nation": []
+    }
